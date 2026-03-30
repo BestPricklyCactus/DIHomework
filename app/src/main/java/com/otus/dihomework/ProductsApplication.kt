@@ -13,7 +13,6 @@ class ProductsApplication : Application(), DependenciesProvider {
     override fun onCreate() {
         super.onCreate()
         appComponent = DaggerAppComponent.factory().create(this)
-        ServiceLocator.init(this)
     }
 
     override fun getDependencies(): Dependencies {
